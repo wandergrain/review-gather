@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# PyInstaller
+build/
+dist/
+
+# 运行产物
+config.json
+_shots/
+_release/
+*.csv
+*.log
+# 抓取导出的 TXT 报告，但保留 requirements.txt
+*.txt
+!requirements.txt
+
+# 开发辅助脚本
+_scan.py
+_scan2.py
+_shot_all.py
+_strip_comments.py
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 系统
+.DS_Store
+Thumbs.db

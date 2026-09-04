@@ -1,0 +1,22 @@
+{
+  "theme": "深海蓝",
+  "engine": {
+    "timeout": 5.0,
+    "retries": 2,
+    "backoff": 0.2,
+    "page_size": 100,
+    "base_sleep": 0.2,
+    "jitter": 0.05,
+    "game_name_timeout": 5.0,
+    "game_name_worker_timeout": 6.0,
+    "export_dir": "",
+    "log_line_limit": 500,
+    "auto_scroll_log": false,
+    "auto_switch_to_log": false,
+    "log_timestamp": true,
+    "accent_color": "青绿",
+    "bg_image": "",
+    "card_transparency": 90,
+    "bg_blur": 0
+  }
+}
