@@ -1,6 +1,6 @@
 # 拾评 (ReviewGather)
 
-> 基于 Steam 官方公开接口的评测批量抓取工具，图形化界面，开箱即用。
+> 基于 Steam 官方公开接口的评测批量抓取工具，图形化界面，解压即用
 
 「拾评」让你无需编写任何代码，即可快速抓取任意 Steam 游戏的用户评测数据，
 按语言、好评 / 差评、购买来源、游戏时长等多维度筛选，实时统计并与官方总数对比，
@@ -126,7 +126,7 @@ python main.py
 
 ## 编译打包
 
-使用 PyInstaller，目标机器无需安装 Python。推荐 **onedir 模式**（启动快，无需解压）：
+使用 PyInstaller，目标机器无需安装 Python
 
 ```bash
 pip install pyinstaller
@@ -135,7 +135,7 @@ pyinstaller --noconfirm ReviewGather.spec
 
 产物在 `dist/ReviewGather/`，分发时复制整个文件夹，双击 `ReviewGather.exe` 运行。
 
-如需打成**单个 EXE**（分发方便，但启动时先解压、稍慢）：
+如需打成**单个 EXE**：
 
 ```bash
 pyinstaller --noconfirm --onefile --windowed --name ReviewGather --icon assets/icon.ico main.py
@@ -189,18 +189,22 @@ review-gather/
 ## 常见问题
 
 **Q：抓取速度慢 / 超时报错？**
+
 A：可在「网络与请求」设置页适当增大超时与重试次数；也可降低翻页频率（增大 `base_sleep`）
 避免触发 Steam 限流。
 
 **Q：为什么没有导出文件？**
+
 A：检查「导出设置」中的格式是否为「仅 TXT」却期望 CSV；确认「导出目录」有写入权限；
 若本次没有符合条件的评测，程序不会生成文件。
 
 **Q：填了 API Key 还是显示 SteamID？**
+
 A：先用「验证 Key」检查有效性；若 Key 有效，请确认没有在申请时填写过期域名，
 新申请的 Key 可能需要几分钟生效。
 
 **Q：背景图片铺不满 / 重启后不适配？**
+
 A：较新版本已修复此问题，请升级到最新 Release；若仍异常，请附带截图反馈。
 
 ## 免责声明
